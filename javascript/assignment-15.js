@@ -40,20 +40,26 @@ Write a function that returns the cumulative sum of the number of
 all the previous (including current) dots when given its
 corresponding triangle number of the sequence.
 */
-const triangle = 6 ;
-var cum_sum = 0;
-var prev_val = 1;
 
-let n = 1;
-
-while (n <= triangle)
+function triange(n)
 {
-    if (triangle === 1) return 1;   
-    cum_sum += n ;
-    n++;
+    var cum_sum = 0;
+    var final_sum = 0;
+    let j = 1;
+    while (j <= n)
+    {
+        if (n === 1) return 1;
            
-}
-console.log(cum_sum);
+        cum_sum = cum_sum  + j ;
+        final_sum +=cum_sum;
+        j++;
+        
+    }
+    return final_sum;
+}    
+console.log(triange(1));
+console.log(triange(6));
+
 
 /*Given a total due and an array representing the amount of
 change in your pocket, determine whether or not you are able to pay
