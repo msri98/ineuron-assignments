@@ -87,8 +87,10 @@ init();
 3.
 Give 3 real world examples where async/await has been used?
 Answer: 
-if you see my code to the very first question in this file, you will understand that i have understood 
-how to use Async, Await in the code.
+REST API & MicroServices
+Real Time Services ( Chat & Live Updates)
+CRUD Apps - Blogs, Shopping Cards, Social Networks
+Tools & Utilities
 */
 //******************************************************************************************** */
 /*
