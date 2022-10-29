@@ -1,0 +1,268 @@
+<!--
+1. 
+Select an <h2> tag with id of text and change its inner text to
+“Hello World”.
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2 id="h2id">hello</h2>
+
+<script>
+    document.getElementById("h2id").innerHTML = "Hello World";
+</script>
+</body>
+</html>
+
+<!--------------------------------------------------------------------->
+<!--
+2.
+Apply following style to the same h2 using Javascript DOM
+Method.
+colour: red,
+fontWeight: bold,
+textTransform: uppercase
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #h2id {
+              
+              color: red;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+        </style>
+    </head>
+<body>
+<h2 id="h2id">hello</h2>
+
+<script>
+    document.getElementById("h2id").innerHTML = "Hello World"
+</script>
+</body>
+</html>
+<!------------------------------------------------------------------------->
+<!--
+3. Create a simple calculator that takes the input from
+input1, input 2 and add them together.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function addus(num1 = 0, num2 = 0)
+            {   
+                
+                alert(parseInt(num1) + parseInt(num2)) ;
+            }
+        </script>
+    </head>
+<body>
+<h2 id="h2id"><b>Simple Calculator</b></h2>
+<label for="input1">Enter First Number:</label><input type="number" id="input1" name="input1"><br>
+<label for="input2">Enter Second Number:</label><input type="number" id="input2" name="input2"><br><br>
+<button type="button" onclick="addus(document.getElementById('input1').value,document.getElementById('input2').value)">Add Us</button>
+</body>
+</html>
+<!------------------------------------------------------------------------->
+<!--
+4. What is the error in the following code?
+-->
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="text">test</p>
+
+    <script>
+        document.getElementById("text").innerHTML = "Hi JS DOM";
+       </script>
+</body>
+</html>
+<!------------------------------------------------------->
+<!--
+5. 
+Using JS Dom select a button and set its onclick event to
+logging hello in the console.
+-->
+<!DOCTYPE html>
+<html>
+<body>
+    <br><br>
+    <button id="btn" width="40" onclick="logmsg()">Click Me...</button>
+
+    <script>
+        function logmsg()
+        {
+            console.log("hello");
+        }
+       </script>
+</body>
+</html>
+<!------------------------------------------------------->
+<!--
+6. 
+Using alert, prevent a person from leaving the screen using JS
+DOM.
+-->
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        How to detect browser or tab closing
+    </title>
+</head>
+  
+<body>
+    <h1 style="color: green">
+        iNeuron
+    </h1>
+      
+    <b>Detect browser or tab closing</b>
+      
+    <p>
+        The beforeunload function is triggered
+        just before the browser or tab is to be
+        closed or the page is to be reloaded.
+        Modern browsers require some interaction
+        with the page, otherwise the dialog box
+        is not shown.
+    </p>
+      
+    <form>
+        <textarea placeholder = "Trigger an 
+         interaction by writing something here">
+        </textarea>
+    </form>
+      
+    <script type="text/javascript">
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+    </script>
+</body>
+  
+</html> 
+<!------------------------------------------------------->
+<!--
+7.
+Select all the h2 tags on screen and change their colour to
+purple.
+-->
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body >
+    <br><br>
+    <h2 class="h2cls">h2 heading 1</h2>
+    <h2 class="h2cls">h2 heading 2</h2>
+    <h2 class="h2cls">h2 heading 3</h2>
+    <h2 class="h2cls">h2 heading 4</h2>
+    <h2 class="h2cls">h2 heading 5</h2>
+    <script>
+    var headings = document.getElementsByClassName("h2cls");
+
+    for (var i in headings)
+    {
+        headings[i].style.color ='purple';
+    }
+    </script>
+</body>
+</html>
+<!------------------------------------------------------->
+<!--
+    8. 
+    Create a new <h4> tag on the screen using JS DOM.
+-->
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body >
+    <br><br>
+    <h1 class"h1cls"> h1 heading </h1>
+    <h2 class="h2cls">h2 heading </h2>
+    
+    <script>
+        var h4 = document.createElement("H4");
+        h4.id ="h4id";
+        h4.style.color="blue";
+        h4.textContent ="this is newly Created H4 heading.";
+        document.body.appendChild(h4);
+        
+        
+</script>
+</body>
+</html>
+<!------------------------------------------------------->
+<!--
+9. 
+Remove an element from the screen using js dom.
+-->
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body >
+    <br><br>
+    <h1 class"h1cls"> h1 heading </h1>
+    <h2 class="h2cls">h2 heading </h2>
+    <h4 id="h4id">I'm h4 heading. </h4>
+    <script>
+        var h4 = document.getElementById("h4id");
+        h4.remove();
+    </script>
+</body>
+</html>
+<!------------------------------------------------------->
+<!--
+10. 
+    Get the number of <p> tags on the screen using JS DOM.
+-->
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body >
+    <br><br>
+    <h1 class"h1cls"> Count how many paragrahs are in the below. </h1>
+    <p id="pid1"> Paragraph 1 </p>
+    <p id="pid2"> Paragraph 2 </p>
+    <script>
+        var ptags = document.getElementsByTagName("p");
+
+        document.write("<p>There are " + ptags.length + " p tags </p>");
+    
+    </script>
+</body>
+</html>
+<!------------------------------------------------------->
+<!--
+11. 
+Fetch the value of name from the following form.
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Show a Push Button</h1>
+
+<p>The button below activates a JavaScript when it is clicked.</p>
+<form>
+    Name: <input type="text" id="name" value="Apple"><br><br>
+  <input type="button" value="Click me" onclick="msg()">
+</form>
+
+<script>
+function msg() {
+  var name = document.getElementById('name').value;
+  document.write(name);  
+}
+</script>
+
+</body>
+</html>
+<!--------------C O M P L E T E D----------------------------------------->
+
+
